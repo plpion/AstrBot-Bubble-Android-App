@@ -20,10 +20,15 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
+          flutter-version: '3.24.0' # 改为指定兼容版本
           channel: 'stable'
+          cache: true
           
-      - name: Get dependencies
-        run: flutter pub get
+      - name: Clean project
+        run: flutter clean
+        
+      - name: Upgrade dependencies
+        run: flutter pub upgrade
         
       - name: Build APK
         run: flutter build apk --release
