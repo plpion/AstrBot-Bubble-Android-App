@@ -1,0 +1,11 @@
+# 在 zip2apk.py 中找到这里：
+    run([
+        keytool, "-genkeypair", "-v",
+        "-keystore", str(keystore),
+        "-alias", "androiddebugkey",
+        "-storepass", "android",
+        "-keypass", "android",
+        "-keyalg", "RSA", "-keysize", "2048", "-validity", "10000",
+        "-dname", "CN=Android Debug,O=Android,C=US",
+        "-noprompt"  # <--- 新增这一行
+    ])
