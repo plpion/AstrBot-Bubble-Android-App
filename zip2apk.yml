@@ -1,0 +1,6 @@
+- name: Set up Flutter
+  uses: subosito/flutter-action@v2
+  with:
+    flutter-version: '3.24.4' # 改成 3.24.1 或更高的稳定版
+    channel: 'stable'
+    cache: true
