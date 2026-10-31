@@ -26,7 +26,7 @@ jobs:
 
       - name: Force Fix Dependency Conflict
         run: |
-          # 暴力替换 pubspec.yaml 里的冲突版本，并删除旧锁文件
+          # Flutter SDK 把 path 钉死在 1.9.0，把项目里的 ^1.9.1 改成 1.9.0
           sed -i 's/path: \^1.9.1/path: 1.9.0/g' pubspec.yaml
           rm -f pubspec.lock
 
